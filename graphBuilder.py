@@ -30,3 +30,4 @@ def buildGrapg(startPoint:float, endPoint:float, step:float):
 
         plt.savefig('tempPic.png', dpi=300)
         # plt.show()
+        #tempPic.png || C:\Users\Volodymyr\OneDrive - National University of Kyiv Mohyla Аcademy\пактика_1_курс\Graph_builder\tempPic.png

@@ -18,22 +18,22 @@ def getCoordinates(startPoint:float, endPoint:float, step:float) -> tuple[list, 
 
 def checkStartValue(startValue:float) -> string:
     if(startValue < -1.139):
-        return 'start value must be not less then -1.139.\n'
+        return 'start value must be\nnot less then -1.139.\n\n'
     return ''
 
 def checkEndValue(endValue:float) -> string:
     if(endValue > 1.139):
-        return 'end value must be not greater then 1.139.\n'
+        return 'end value must be\nnot greater then 1.139.\n\n'
     return ''
 
 def checkDifferenceValue(startValue:float, endValue:float) -> string:
     if(startValue > endValue):
-        return 'start value must be less then end value.\n'
+        return 'start value must be\nless then end value.\n\n'
     return ''
 
 def checkStepValue(stepValue:float) -> string:
     if(stepValue <= 0.0):
-        return 'step must be greater then 0.'
+        return 'step must be\ngreater then 0.\n\n'
     return ''
 
 def getFloatNum(value:string) -> tuple[float, bool]:
