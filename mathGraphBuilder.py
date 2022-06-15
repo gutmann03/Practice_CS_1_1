@@ -1,5 +1,16 @@
 import string
 
+def getLeftPart(x:float) -> float:
+    return pow(abs(x), (2/3))
+
+def getRightPart(x:float) -> float:
+    return pow((pow(abs(x), (4/3)) + 4 * (1 - pow(abs(x), 2))), 0.5)
+
+def getUpper(x:float) -> float:
+    return 0.5 * (getLeftPart(x) + getRightPart(x))
+
+def getLower(x:float) -> float:
+    return 0.5 * (getLeftPart(x) - getRightPart(x))
 
 def getCoordinates(startPoint:float, endPoint:float, step:float) -> tuple[list, list, list]:
     xS, yUppers, yLowers = [], [], []
@@ -7,13 +18,14 @@ def getCoordinates(startPoint:float, endPoint:float, step:float) -> tuple[list, 
     while x <= endPoint:
         xS.append(x)
 
-        yUpper = 0.5*(pow(abs(x), (2/3)) + pow((pow(abs(x), (4/3)) + 4 * (1 - pow(abs(x), 2))), 0.5))
-        yUppers.append(yUpper)
+        yUppers.append(getUpper(x))
 
-        yLower = 0.5*(pow(abs(x), (2/3)) - pow((pow(abs(x), (4/3)) + 4 * (1 - pow(abs(x), 2))), 0.5))
-        yLowers.append(yLower)
+        yLowers.append(getLower(x))
         x += step
     
+    xS.append(endPoint)
+    yUppers.append(getUpper(endPoint))
+    yLowers.append(getLower(endPoint))
     return xS, yUppers, yLowers
 
 def checkStartValue(startValue:float) -> string:
@@ -40,5 +52,5 @@ def getFloatNum(value:string) -> tuple[float, bool]:
     try:
         outValue = float(value)
         return outValue, True
-    except:
+    except Exception:
         return 0.1, False
