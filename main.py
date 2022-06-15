@@ -1,9 +1,5 @@
-a = 5
-b = int
+import gui
 
-while a < 10:
-    a = a + 1
-    if a == 9:
-        b = 90
-
-print(a, b)
+if __name__ == "__main__":
+    master = gui.MyGUI()
+    master.root.mainloop()
