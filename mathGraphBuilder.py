@@ -35,7 +35,7 @@ def checkStartValue(startValue:float) -> string:
 
 def checkEndValue(endValue:float) -> string:
     if(endValue > 1.139):
-        return 'end value must be\nnot greater then 1.139.\n\n'
+        return 'end value must be\nnot bigger then 1.139.\n\n'
     return ''
 
 def checkDifferenceValue(startValue:float, endValue:float) -> string:
@@ -45,7 +45,7 @@ def checkDifferenceValue(startValue:float, endValue:float) -> string:
 
 def checkStepValue(stepValue:float) -> string:
     if(stepValue <= 0.0):
-        return 'step must be\ngreater then 0.\n\n'
+        return 'step must be\nbigger then 0.\n\n'
     return ''
 
 def getFloatNum(value:string) -> tuple[float, bool]:
