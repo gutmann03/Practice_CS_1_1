@@ -6,7 +6,6 @@ import mathGraphBuilder as mgb
 class MyGUI:
     def __init__(self) -> None:
         self.grapher = gb.GraphBuilder()
-        global root
         self.root = Toplevel()
         self.isChanged = False
 
@@ -85,7 +84,6 @@ class MyGUI:
             self.grapher.saveWithPath()
             self.lblGrapg.config(image=self.startImg)
             self.isChanged = False
-            self.root.quit()
         else:
             outputString = 'There is nothing to save.\nBuild something first.'
             self.lblScreen.config(text=outputString, font='Times 13', justify='left', fg='magenta')
