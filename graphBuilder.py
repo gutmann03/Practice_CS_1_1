@@ -1,4 +1,3 @@
-import numpy as np
 import matplotlib.pyplot as plt
 import mathGraphBuilder as mgb
 from tkinter import filedialog as fd

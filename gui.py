@@ -21,13 +21,13 @@ class MyGUI:
         self.startPosEl = Entry(self.root, font='Times 16', width=6)
         self.startPosEl.place(x=180, y=4)
 
-        self.lblSetEndPos = Label(self.root, text='end value', font='Times 16')
-        self.lblSetEndPos.place(x=25, y=40)
+        self.lblEndPos = Label(self.root, text='end value', font='Times 16')
+        self.lblEndPos.place(x=25, y=40)
         self.endPosEl = Entry(self.root, font='Times 16', width=6)
         self.endPosEl.place(x=180, y=46)
 
-        self.lblSetstep = Label(self.root, text='step', font='Times 16')
-        self.lblSetstep.place(x=25, y=80)
+        self.lblStep = Label(self.root, text='step', font='Times 16')
+        self.lblStep.place(x=25, y=80)
         self.stepEl = Entry(self.root, font='Times 16', width=6)
         self.stepEl.place(x=180, y=88)
 
